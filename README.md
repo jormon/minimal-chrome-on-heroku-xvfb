@@ -1,5 +1,7 @@
 # minimal-chrome-on-heroku-xvfb
-Getting Chrome up and running of Heroku
+Getting Chrome up and running on Heroku!
+
+This is a sister repo of [jormon/minimal-chrome-on-heroku](https://github.com/jormon/minimal-chrome-on-heroku) which operates on the heroku-16 stack without xvfb.
 
 I tried to keep the number of gems as minimal as possible, though I did include Thor for potential future uses with different configuration flags, etc.
 
