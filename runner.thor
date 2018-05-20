@@ -1,25 +1,26 @@
-  require "watir"
 require "fileutils"
+require "watir"
 
 class Runner < Thor
-  desc "google", "scrapes google.com for the google of the day"
-  def google
+  PAGES = %w(
+    https://www.google.com/
+    https://www.apple.com/
+    https://www.facebook.com/
+  ).freeze
+
+  desc "website", "scrapes a website for its page title"
+  def website
     browser = new_browser
 
-    browser.goto "https://www.google.com/"
+    url = PAGES.sample
+    browser.goto url
 
-    logo_div = browser.div(id: "hplogo")
-    logo_div.wait_until_present
+    title = browser.title
 
-    image = logo_div.img
-    subtext = logo_div.div(:class, "logo-subtext")
-
-    if image.present?
-      puts "Google says: #{image.alt}"
-    elsif subtext.present?
-      puts "No image, but you're on Google #{subtext.text}!"
+    if title.nil?
+      puts "I've tried to load: #{url}, but it doesn't have a title."
     else
-      puts "I've loaded google, but I'm on some site I don't recognize."
+      puts "I've ended up loading: #{title}"
     end
   end
 

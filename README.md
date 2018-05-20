@@ -22,5 +22,5 @@ You can use the following button to deploy this to a test instance and check it 
 Once you deploy, from your commandline, simply run the following command with heroku toolbelt:
 
 ```
-$ heroku run -a <insert-created-app-name> "thor runner google"
+$ heroku run "thor runner:website"
 ```
