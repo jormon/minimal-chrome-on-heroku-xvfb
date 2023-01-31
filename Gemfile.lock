@@ -8,11 +8,11 @@ GEM
       archive-zip (~> 0.10)
       nokogiri (~> 1.8)
     io-like (0.3.1)
-    mini_portile2 (2.6.1)
-    nokogiri (1.12.5)
-      mini_portile2 (~> 2.6.1)
+    mini_portile2 (2.8.1)
+    nokogiri (1.14.1)
+      mini_portile2 (~> 2.8.0)
       racc (~> 1.4)
-    racc (1.5.2)
+    racc (1.6.2)
     regexp_parser (1.7.0)
     rubyzip (2.3.0)
     selenium-webdriver (3.142.7)
@@ -32,7 +32,7 @@ DEPENDENCIES
   watir
 
 RUBY VERSION
-   ruby 2.5.8p224
+   ruby 2.7.5p203
 
 BUNDLED WITH
-   2.0.2
+   2.1.4
